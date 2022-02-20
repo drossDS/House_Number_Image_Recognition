@@ -6,13 +6,22 @@ The Street View Housing Numbers (SVHN) dataset contains over 600,000 images of h
 
 ## Initial Processing and Exploratory Data Analysis
 
-*Note:  Due to the computationally intensive nature of this model and the large amount of data, this project was completed in Google Colab so that the built-in GPU could be utilized to decrease processing time. It should also be noted that the ANN and CNN models were run in separate notebooks.
+
+*Note:  Due to the computationally intensive nature of this model and the large amount of data, this project was completed in Google Colab so that the built-in GPU could be utilized to decrease processing time. It should also be noted that the ANN and CNN models were run in separate notebooks.*
 
 ***DAN - GO BACK AND DOWNLOAD A NEW VERSION OF THE CODE AS A JUPYTER NOTEBOOK AND DON'T DO THE HTML THING
 
 The provided dataset was pre-split into training and test datasets of 42,000 and 18,000 images respectively.  These were each assigned to their own dataframes.  Examining the images revealed hat each image was stored as a 32 x 32 matrix with values between 0 and 255 (indicating color/darkness).  The data were then normalized by dividing by 255 so that all numerical values would range proprotionally between 0 and 1 so that it could be processed by the neural network models.
 
 ## Models Run
+
+
+
+| | Layer | Properties |
+| --- | --- | ---|
+|1| Convolutional | Filters: 16, Kernel Size: 3x3, Padding: Same |
+| |
+|2| LeakyRelu | Slope: 0.1 |
 
 
 DAN - Say something about all models being "sequential"
