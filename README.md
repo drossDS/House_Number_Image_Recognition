@@ -24,11 +24,11 @@ ANN Model 1 implmented two hidden layers employing ReLU activation funcitons.  M
 | --- | --- | ---|---| --- | --- | ---|
 |1| Hidden | Nodes: 64, Activation: Relu ||1| Hidden | ***Nodes: 256***, Activation: Relu |
 |2| Hidden | Nodes: 32, Activation: Relu ||2| Hidden | ***Nodes: 128***, Activation: Relu |
-|||||3| Dropout | Dropout Rate: 0.2 |
-|||||4| Hidden | Nodes: 64, Activation: Relu |
-|||||5| Hidden | Nodes: 64, Activation: Relu |
-|||||6| Hidden | Nodes: 32, Activation: Relu |
-|||||7| Batch Normalization | None Specified |
+|||||***3***| ***Dropout*** | ***Dropout Rate: 0.2*** |
+|||||***4***| ***Hidden*** | ***Nodes: 64, Activation: Relu*** |
+|||||***5***| ***Hidden*** | ***Nodes: 64, Activation: Relu*** |
+|||||***6***| ***Hidden*** | ***Nodes: 32, Activation: Relu*** |
+|||||***7***| ***Batch Normalization*** | ***None Specified*** |
 |3| Output | Nodes: 10, Activiation: Softmax ||8| Output | Nodes: 10, Activiation: Softmax |
 | <br>|  |  || |  |  |
 |-| Compile | Loss: Categorical Crossentropy<br>Optimizer: Adam, Learning Rate: 0.001<br>Metrics: Accuracy ||- | Compile | Loss: Categorical Crossentropy<br>Optimizer: Adam, ***Learning Rate: 0.0005***<br>Metrics: Accuracy |
@@ -45,17 +45,17 @@ CNN model 1 employed convolutional filters with 3x3 kernels and LeakyReLU activa
 |3| Convolutional | Filters: 32, Kernel Size: 3x3, Padding: Same ||3| Convolutional | Filters: 32, Kernel Size: 3x3, Padding: Same |
 |4| LeakyRelu | Slope: 0.1 ||4| LeakyRelu | Slope: 0.1 |
 |5| Max Pooling | Pool Size:  2x2 ||5| Max Pooling | Pool Size:  2x2 | 
-|||||6| Batch Normalization | None Specified |
-|||||7| Convolutional | Filters: 32, Kernel Size: 3x3, Padding: Same |
-|||||8| LeakyRelu | Slope: 0.1 |
-|||||9| Convolutional | Filters: 64, Kernel Size: 3x3, Padding: Same |
-|||||10| LeakyRelu | Slope: 0.1 |
-|||||11| Max Pooling | Pool Size:  2x2 |
-|||||12| Batch Normalization | None Specified |
+|||||***6***| ***Batch Normalization*** | ***None Specified*** |
+|||||***7***| ***Convolutional*** | ***Filters: 32, Kernel Size: 3x3, Padding: Same*** |
+|||||***8***| ***LeakyRelu*** | ***Slope: 0.1*** |
+|||||***9***| ***Convolutional*** | ***Filters: 64, Kernel Size: 3x3, Padding: Same*** |
+|||||***10***| ***LeakyRelu*** | ***Slope: 0.1*** |
+|||||***11***| ***Max Pooling*** | ***Pool Size:  2x2*** |
+|||||***12***| ***Batch Normalization*** | ***None Specified*** |
 |6| Flatten | None Specified ||13| Flatten | None Specified |
 |7| Dense | Nodes: 32 ||14| Dense | Nodes: 32 |
 |8| LeakyRelu | Slope: 0.1 ||15| LeakyRelu | Slope: 0.1 |
-|||||16|Dropout | Dropout Rate: 0.5|
+|||||***16***|***Dropout*** | ***Dropout Rate: 0.5***|
 |9| Output | Nodes: 10, Activiation: Softmax ||17| Output | Nodes: 10, Activiation: Softmax |
 | <br>|  |  || |  |  |
 |-| Compile | Loss: Categorical Crossentropy<br>Optimizer: Adam, Learning Rate: 0.001<br>Metrics: Accuracy ||- | Compile | Loss: Categorical Crossentropy<br>Optimizer: Adam, Learning Rate: 0.001<br>Metrics: Accuracy |
