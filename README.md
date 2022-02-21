@@ -11,7 +11,7 @@ The Street View Housing Numbers (SVHN) dataset contains over 600,000 images of h
 
 ***DAN - GO BACK AND DOWNLOAD A NEW VERSION OF THE CODE AS A JUPYTER NOTEBOOK AND DON'T DO THE HTML THING
 
-The provided dataset was pre-split into training and test datasets of 42,000 and 18,000 images respectively.  These were each assigned to their own dataframes.  Examining the images revealed hat each image was stored as a 32 x 32 matrix with values between 0 and 255 (indicating color/darkness).  The data were then normalized by dividing by 255 so that all numerical values would range proprotionally between 0 and 1 so that it could be processed by the neural network models.
+The provided dataset was pre-split into training and test datasets of 42,000 and 18,000 images respectively.  These were each assigned to their own dataframes.  Examining the images revealed hat each image was stored as a 32 x 32 matrix with values between 0 and 255 (indicating color/darkness).  For the ANN model, the 32 x 32 matrices representing each image were reshaped to a singe array of 1024 elements.  This was not done for the data being processed by the CNN model, and presumably, this is to maintain the 2-dimensional proeprties of the image so that th econvolution fileters could be applied.  The data being used in both models were then normalized by dividing all elements by 255 so that all numerical values would range proprotionally between 0 and 1 for neural network algorithms.  The image label datasets (ranging between between 0 and 9) were then one-hot encoded so that each digit could be mapped to a category into which the nerual networks could assign the provided image data.
 
 ## Models Run
 
