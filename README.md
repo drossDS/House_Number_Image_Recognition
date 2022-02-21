@@ -15,7 +15,7 @@ The provided dataset was pre-split into training and test datasets of 42,000 and
 
 ## Models Run
 
-By nature, the Artificial Neural Network models were far simpler than the Convolutional models, and this is reflected specifically in the both quantities and types of layers that make up each model.  Below are brief descriptions of each along with tables of the detailed parameters for each model.  For both ANN and CNN models, two variations were run to showcase the benefits of adding features to improve model accuracy.  The bolded values in tables below highlight the differences between the properties of the two model variations for the ANN and CNN models.
+All Artificial and Convolutional Neural Network models were run with Keras as sequential models.  For both ANN and CNN models, two variations were run to showcase the benefits of adding features to improve model accuracy.  By nature, the ANN models were far simpler than the CNN models, and this is reflected specifically in the both quantities and types of layers that make up each model.  Below are brief descriptions of each along with tables of the detailed properties of each model.  The bolded values in tables below highlight the differences between the properties of the two model variations for the ANN and CNN models.
 
 ### Artificial Neural Network (ANN) Model Properties
 ANN Model 1 implmented two hidden layers employing ReLU activation funcitons.  Model 2 added more hidden layers, dropout layers, and batch normalization layers, and increased the number of nodes speified in each hidden layer.
