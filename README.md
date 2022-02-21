@@ -15,12 +15,27 @@ The provided dataset was pre-split into training and test datasets of 42,000 and
 
 ## Models Run
 
+### Artificial Neural Network (ANN) Model Properties
+
+| | Layer | **Model 1 Properties** || | Layer | **Model 2 Properties** |
+| --- | --- | ---|---| --- | --- | ---|
+|1| Hidden | Nodes: 64, Activation: Relu ||1| Hidden | Nodes: 256, Activation: Relu |
+|2| Hidden | Nodes: 32, Activation: Relu ||2| Hidden | Nodes: 128, Activation: Relu |
+|||||3| Dropout | Dropout Rate: 0.2 |
+|||||4| Hidden | Nodes: 64, Activation: Relu |
+|||||5| Hidden | Nodes: 64, Activation: Relu |
+|||||6| Hidden | Nodes: 32, Activation: Relu |
+|||||7| Batch Normalization | None Specified |
+|3| Output | Nodes: 10, Activiation: Softmax ||8| Output | Nodes: 10, Activiation: Softmax |
+| <br>|  |  || |  |  |
+|-| Compile | Loss: Categorical Crossentropy<br>Optimizer: Adam, Learning Rate: 0.001<br>Metrics: Accuracy ||- | Compile | Loss: Categorical Crossentropy<br>Optimizer: Adam, ***Learning Rate: 0.0005***<br>Metrics: Accuracy |
+|-| Fitting | Validation Split: 0.2<br>Batch Size: 128<br>Epochs: 20 ||- | Fitting | Validation Split: 0.2<br>Batch Size: 128<br>***Epochs: 30*** |
+
 
 ### Convolutional Neural Network (CNN) Model Properties
 
-| |  | **Model 1** || |  | **Model 2** |
+| | Layer | **Model 1 Properties** || | Layer | **Model 2 Properties** |
 | --- | --- | ---|---| --- | --- | ---|
-| | Layer | Properties || | Layer | Properties |
 |1| Convolutional | Filters: 16, Kernel Size: 3x3, Padding: Same ||1| Convolutional | Filters: 16, Kernel Size: 3x3, Padding: Same |
 |2| LeakyRelu | Slope: 0.1 ||2| LeakyRelu | Slope: 0.1 |
 |3| Convolutional | Filters: 32, Kernel Size: 3x3, Padding: Same ||3| Convolutional | Filters: 32, Kernel Size: 3x3, Padding: Same |
@@ -40,7 +55,7 @@ The provided dataset was pre-split into training and test datasets of 42,000 and
 |9| Output | Nodes: 10, Activiation: Softmax ||17| Output | Nodes: 10, Activiation: Softmax |
 | <br>|  |  || |  |  |
 |-| Compile | Loss: Categorical Crossentropy<br>Optimizer: Adam, Learning Rate: 0.001<br>Metrics: Accuracy ||- | Compile | Loss: Categorical Crossentropy<br>Optimizer: Adam, Learning Rate: 0.001<br>Metrics: Accuracy |
-|-| Fitting | Validation Split: 0.2<br>Batch Size: 32<br>Epochs: 20 ||- | Fitting | Validation Split: 0.2<br>***Batch Size: 128***<br>Epochs: 30 |
+|-| Fitting | Validation Split: 0.2<br>Batch Size: 32<br>Epochs: 20 ||- | Fitting | Validation Split: 0.2<br>***Batch Size: 128***<br>***Epochs: 30*** |
 
 
 DAN - Say something about all models being "sequential"
