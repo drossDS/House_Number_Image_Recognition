@@ -38,12 +38,10 @@ The provided dataset was pre-split into training and test datasets of 42,000 and
 |8| LeakyRelu | Slope: 0.1 ||15| LeakyRelu | Slope: 0.1 |
 |||||16|Dropout | Dropout Rate: 0.5|
 |9| Output | Nodes: 10, Activiation: Softmax ||17| Output | Nodes: 10, Activiation: Softmax |
-| <br><br> |  |  || |  |  |
-| | Compile | Validation Split: 0.2<br>Batch Size: 32<br>Epochs: 20 || | Compile | Validation Split: 0.2<br>Batch Size: 128<br>Epochs: 30 |
+| <br>|  |  || |  |  |
+|-| Compile | Loss: Categorical Crossentropy<br>Optimizer: Adam, Learning Rate: 0.001<br>Metrics: Accuracy ||- | Compile | Loss: Categorical Crossentropy<br>Optimizer: Adam, Learning Rate: 0.001<br>Metrics: Accuracy |
+|-| Fitting | Validation Split: 0.2<br>Batch Size: 32<br>Epochs: 20 ||- | Fitting | Validation Split: 0.2<br>***Batch Size: 128***<br>Epochs: 30 |
 
-| |  | **>>>Model 1 Compiling<<<** || |  | **Model 2 Compiling** |
-| --- | --- | ---|---| --- | --- | ---|
-| | Validation Split | 0.2 || | Validation Split | 0.2 |
 
 DAN - Say something about all models being "sequential"
 
