@@ -18,12 +18,12 @@ The provided dataset was pre-split into training and test datasets of 42,000 and
 All Artificial and Convolutional Neural Network models were run with Keras as sequential models.  For both ANN and CNN models, two variations were run to showcase the benefits of adding features to improve model accuracy.  By nature, the ANN models were far simpler than the CNN models, and this is reflected specifically in the both quantities and types of layers that make up each model.  Below are brief descriptions of each along with tables of the detailed properties of each model.  The bolded values in tables below highlight the differences between the properties of the two model variations for the ANN and CNN models.
 
 ### Artificial Neural Network (ANN) Model Properties
-ANN Model 1 implmented two hidden layers employing ReLU activation funcitons.  Model 2 added more hidden layers, dropout layers, and batch normalization layers, and increased the number of nodes speified in each hidden layer.
+ANN Model 1 implmented two hidden layers employing ReLU activation funcitons.  Model 2 added more hidden layers, dropout layers, and batch normalization layers, and increased the number of nodes speified in each hidden layer.  The models are compared side-by-side in the table below for easy comparison.
 
 | | Layer | **Model 1 Properties** || | Layer | **Model 2 Properties** |
 | --- | --- | ---|---| --- | --- | ---|
-|1| Hidden | Nodes: 64, Activation: Relu ||1| Hidden | Nodes: 256, Activation: Relu |
-|2| Hidden | Nodes: 32, Activation: Relu ||2| Hidden | Nodes: 128, Activation: Relu |
+|1| Hidden | Nodes: 64, Activation: Relu ||1| Hidden | ***Nodes: 256***, Activation: Relu |
+|2| Hidden | Nodes: 32, Activation: Relu ||2| Hidden | ***Nodes: 128***, Activation: Relu |
 |||||3| Dropout | Dropout Rate: 0.2 |
 |||||4| Hidden | Nodes: 64, Activation: Relu |
 |||||5| Hidden | Nodes: 64, Activation: Relu |
@@ -36,7 +36,7 @@ ANN Model 1 implmented two hidden layers employing ReLU activation funcitons.  M
 
 
 ### Convolutional Neural Network (CNN) Model Properties
-CNN model 1
+CNN model 1 employed convolutional filters with 3x3 kernels and LeakyReLU activation layers in addition to max-pooling, flattening, and dense layers.  Model 2 added more convolutional filter layers, along with dropout, and batch normalization layers.  The models are compared side-by-side in the table below for easy comparison.
 
 | | Layer | **Model 1 Properties** || | Layer | **Model 2 Properties** |
 | --- | --- | ---|---| --- | --- | ---|
@@ -60,9 +60,6 @@ CNN model 1
 | <br>|  |  || |  |  |
 |-| Compile | Loss: Categorical Crossentropy<br>Optimizer: Adam, Learning Rate: 0.001<br>Metrics: Accuracy ||- | Compile | Loss: Categorical Crossentropy<br>Optimizer: Adam, Learning Rate: 0.001<br>Metrics: Accuracy |
 |-| Fitting | Validation Split: 0.2<br>Batch Size: 32<br>Epochs: 20 ||- | Fitting | Validation Split: 0.2<br>***Batch Size: 128***<br>***Epochs: 30*** |
-
-
-DAN - Say something about all models being "sequential"
 
 ## Conclusions
 
