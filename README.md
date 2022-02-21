@@ -20,6 +20,14 @@ All Artificial and Convolutional Neural Network models were run with Keras as se
 ### Artificial Neural Network (ANN) Model Properties
 ANN Model 1 implmented two hidden layers employing ReLU activation funcitons.  Model 2 added more hidden layers, dropout layers, and batch normalization layers, and increased the number of nodes speified in each hidden layer.  The models are compared side-by-side in the table below for easy comparison.
 
+<details>
+  
+  <summary>
+    <b><i>TABLE - Artificial Neural Network Properties (Click for Dropdown)</i></b>
+    </summary>
+  
+  <br>
+  
 | | Layer | **Model 1 Properties** || | Layer | **Model 2 Properties** |
 | --- | --- | ---|---| --- | --- | ---|
 |1| Hidden | Nodes: 64, Activation: Relu ||1| Hidden | ***Nodes: 256***, Activation: Relu |
@@ -33,10 +41,18 @@ ANN Model 1 implmented two hidden layers employing ReLU activation funcitons.  M
 | <br>|  |  || |  |  |
 |-| Compile | Loss: Categorical Crossentropy<br>Optimizer: Adam, Learning Rate: 0.001<br>Metrics: Accuracy ||- | Compile | Loss: Categorical Crossentropy<br>Optimizer: Adam, ***Learning Rate: 0.0005***<br>Metrics: Accuracy |
 |-| Fitting | Validation Split: 0.2<br>Batch Size: 128<br>Epochs: 20 ||- | Fitting | Validation Split: 0.2<br>Batch Size: 128<br>***Epochs: 30*** |
-
+  </details>
 
 ### Convolutional Neural Network (CNN) Model Properties
 CNN model 1 employed convolutional filters with 3x3 kernels and LeakyReLU activation layers in addition to max-pooling, flattening, and dense layers.  Model 2 added more convolutional filter layers, along with dropout, and batch normalization layers.  The models are compared side-by-side in the table below for easy comparison.
+
+<details>
+  
+  <summary>
+    <b><i>TABLE - Convolutional Neural Network Properties (Click for Dropdown)</i></b>
+    </summary>
+  
+  <br>
 
 | | Layer | **Model 1 Properties** || | Layer | **Model 2 Properties** |
 | --- | --- | ---|---| --- | --- | ---|
@@ -60,6 +76,8 @@ CNN model 1 employed convolutional filters with 3x3 kernels and LeakyReLU activa
 | <br>|  |  || |  |  |
 |-| Compile | Loss: Categorical Crossentropy<br>Optimizer: Adam, Learning Rate: 0.001<br>Metrics: Accuracy ||- | Compile | Loss: Categorical Crossentropy<br>Optimizer: Adam, Learning Rate: 0.001<br>Metrics: Accuracy |
 |-| Fitting | Validation Split: 0.2<br>Batch Size: 32<br>Epochs: 20 ||- | Fitting | Validation Split: 0.2<br>***Batch Size: 128***<br>***Epochs: 30*** |
+</details>
+
 
 ## Conclusions
 
