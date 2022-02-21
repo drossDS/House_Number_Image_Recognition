@@ -26,23 +26,24 @@ The provided dataset was pre-split into training and test datasets of 42,000 and
 |3| Convolutional | Filters: 32, Kernel Size: 3x3, Padding: Same ||3| Convolutional | Filters: 32, Kernel Size: 3x3, Padding: Same |
 |4| LeakyRelu | Slope: 0.1 ||4| LeakyRelu | Slope: 0.1 |
 |5| Max Pooling | Pool Size:  2x2 ||5| Max Pooling | Pool Size:  2x2 | 
-|||||6| Batch Normalization | None SPecified |
+|||||6| Batch Normalization | None Specified |
 |||||7| Convolutional | Filters: 32, Kernel Size: 3x3, Padding: Same |
 |||||8| LeakyRelu | Slope: 0.1 |
 |||||9| Convolutional | Filters: 64, Kernel Size: 3x3, Padding: Same |
 |||||10| LeakyRelu | Slope: 0.1 |
 |||||11| Max Pooling | Pool Size:  2x2 |
-|||||12| Batch Normalization | None SPecified |
+|||||12| Batch Normalization | None Specified |
 |6| Flatten | None Specified ||13| Flatten | None Specified |
 |7| Dense | Nodes: 32 ||14| Dense | Nodes: 32 |
 |8| LeakyRelu | Slope: 0.1 ||15| LeakyRelu | Slope: 0.1 |
 |||||16|Dropout | Dropout Rate: 0.5|
 |9| Output | Nodes: 10, Activiation: Softmax ||17| Output | Nodes: 10, Activiation: Softmax |
-| |  | || |  | |
-| |  | **Model 1 Compiling** || |  | **Model 2 Compiling** |
+| <br><br> |  |  || |  |  |
+| | Compile | Validation Split: 0.2<br>Batch Size: 32<br>Epochs: 20 || | Compile | Validation Split: 0.2<br>Batch Size: 128<br>Epochs: 30 |
+
+| |  | **>>>Model 1 Compiling<<<** || |  | **Model 2 Compiling** |
+| --- | --- | ---|---| --- | --- | ---|
 | | Validation Split | 0.2 || | Validation Split | 0.2 |
-
-
 
 DAN - Say something about all models being "sequential"
 
