@@ -16,9 +16,11 @@ The provided dataset was pre-split into training and test datasets of 42,000 and
 ## Models Run
 
 
+### Convolutional Neural Network (CNN) Model Properties
 
-| | Layer | Properties || | Layer | Properties |
+| |  | **Model 1** || |  | **Model 2** |
 | --- | --- | ---|---| --- | --- | ---|
+| | Layer | Properties || | Layer | Properties |
 |1| Convolutional | Filters: 16, Kernel Size: 3x3, Padding: Same ||1| Convolutional | Filters: 16, Kernel Size: 3x3, Padding: Same |
 |2| LeakyRelu | Slope: 0.1 ||2| LeakyRelu | Slope: 0.1 |
 |3| Convolutional | Filters: 32, Kernel Size: 3x3, Padding: Same ||3| Convolutional | Filters: 32, Kernel Size: 3x3, Padding: Same |
@@ -36,7 +38,9 @@ The provided dataset was pre-split into training and test datasets of 42,000 and
 |8| LeakyRelu | Slope: 0.1 ||15| LeakyRelu | Slope: 0.1 |
 |||||16|Dropout | Dropout Rate: 0.5|
 |9| Output | Nodes: 10, Activiation: Softmax ||17| Output | Nodes: 10, Activiation: Softmax |
-
+| |  | || |  | |
+| |  | **Model 1 Compiling** || |  | **Model 2 Compiling** |
+| | Validation Split | 0.2 || | Validation Split | 0.2 |
 
 
 
