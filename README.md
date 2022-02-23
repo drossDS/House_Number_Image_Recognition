@@ -99,6 +99,7 @@ From the above comparison, the CNN Model 2 performs the best on the validation d
   <br>
 
   ![](SVHN_Images/ANN_Model1.png)  ![](SVHN_Images/ANN_Model2.png)
+  ![](SVHN_Images/CNN_Model1.png)  ![](SVHN_Images/CNN_Model2.png)
   
 </details>
 
