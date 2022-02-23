@@ -103,9 +103,10 @@ From the above comparison, the CNN Model 2 performs the best on the validation d
   
 </details>
 
-#### Performance Against Test Data
+### Performance Against Test Data
 
-
+![](SVHN_Images/ANN_Model2_Cnfsn_Matrix.png)  ![](SVHN_Images/CNN_Model2_Cnfsn_Matrix.png)
+![](SVHN_Images/ANN2_Classification_Report.png)  ![](SVHN_Images/CNN2_Classification_Report.png)
 
 ## Conclusions
 
