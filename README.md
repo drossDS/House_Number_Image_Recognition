@@ -30,12 +30,12 @@ ANN Model 1 implmented two hidden layers employing ReLU activation funcitons.  M
   
 | | Layer | **Model 1 Properties** || | Layer | **Model 2 Properties** |
 | --- | --- | ---|---| --- | --- | ---|
-|1| Hidden | Nodes: 64, Activation: Relu ||1| Hidden | ***Nodes: 256***, Activation: Relu |
-|2| Hidden | Nodes: 32, Activation: Relu ||2| Hidden | ***Nodes: 128***, Activation: Relu |
+|1| Hidden | Nodes: 64, Activation: ReLU ||1| Hidden | ***Nodes: 256***, Activation: ReLU |
+|2| Hidden | Nodes: 32, Activation: ReLU ||2| Hidden | ***Nodes: 128***, Activation: ReLU |
 |||||***3***| ***Dropout*** | ***Dropout Rate: 0.2*** |
-|||||***4***| ***Hidden*** | ***Nodes: 64, Activation: Relu*** |
-|||||***5***| ***Hidden*** | ***Nodes: 64, Activation: Relu*** |
-|||||***6***| ***Hidden*** | ***Nodes: 32, Activation: Relu*** |
+|||||***4***| ***Hidden*** | ***Nodes: 64, Activation: ReLU*** |
+|||||***5***| ***Hidden*** | ***Nodes: 64, Activation: ReLU*** |
+|||||***6***| ***Hidden*** | ***Nodes: 32, Activation: ReLU*** |
 |||||***7***| ***Batch Normalization*** | ***None Specified*** |
 |3| Output | Nodes: 10, Activiation: Softmax ||8| Output | Nodes: 10, Activiation: Softmax |
 | <br>|  |  || |  |  |
@@ -57,20 +57,20 @@ CNN model 1 employed convolutional filters with 3x3 kernels and LeakyReLU activa
 | | Layer | **Model 1 Properties** || | Layer | **Model 2 Properties** |
 | --- | --- | ---|---| --- | --- | ---|
 |1| Convolutional | Filters: 16, Kernel Size: 3x3, Padding: Same ||1| Convolutional | Filters: 16, Kernel Size: 3x3, Padding: Same |
-|2| LeakyRelu | Slope: 0.1 ||2| LeakyRelu | Slope: 0.1 |
+|2| LeakyReLU | Slope: 0.1 ||2| LeakyReLU | Slope: 0.1 |
 |3| Convolutional | Filters: 32, Kernel Size: 3x3, Padding: Same ||3| Convolutional | Filters: 32, Kernel Size: 3x3, Padding: Same |
-|4| LeakyRelu | Slope: 0.1 ||4| LeakyRelu | Slope: 0.1 |
+|4| LeakyReLU | Slope: 0.1 ||4| LeakyReLU | Slope: 0.1 |
 |5| Max Pooling | Pool Size:  2x2 ||5| Max Pooling | Pool Size:  2x2 | 
 |||||***6***| ***Batch Normalization*** | ***None Specified*** |
 |||||***7***| ***Convolutional*** | ***Filters: 32, Kernel Size: 3x3, Padding: Same*** |
-|||||***8***| ***LeakyRelu*** | ***Slope: 0.1*** |
+|||||***8***| ***LeakyReLU*** | ***Slope: 0.1*** |
 |||||***9***| ***Convolutional*** | ***Filters: 64, Kernel Size: 3x3, Padding: Same*** |
-|||||***10***| ***LeakyRelu*** | ***Slope: 0.1*** |
+|||||***10***| ***LeakyReLU*** | ***Slope: 0.1*** |
 |||||***11***| ***Max Pooling*** | ***Pool Size:  2x2*** |
 |||||***12***| ***Batch Normalization*** | ***None Specified*** |
 |6| Flatten | None Specified ||13| Flatten | None Specified |
 |7| Dense | Nodes: 32 ||14| Dense | Nodes: 32 |
-|8| LeakyRelu | Slope: 0.1 ||15| LeakyRelu | Slope: 0.1 |
+|8| LeakyReLU | Slope: 0.1 ||15| LeakyReLU | Slope: 0.1 |
 |||||***16***|***Dropout*** | ***Dropout Rate: 0.5***|
 |9| Output | Nodes: 10, Activiation: Softmax ||17| Output | Nodes: 10, Activiation: Softmax |
 | <br>|  |  || |  |  |
@@ -81,12 +81,14 @@ CNN model 1 employed convolutional filters with 3x3 kernels and LeakyReLU activa
 ## Model Evluations and Performance Comparisons
 The improvements in accuracy of each model aginst validation and training datasets after each training epoch are shown in the plots in the dropdown below.  It can be seen that after approximately 10 epochs, the models tend to stabalize, and their final accuracy values are summarized in the table below.
 
-| Model | Model Properties | Training Accuracy | Validation Accuracy |
+| Model | Layer Properties | Training Accuracy | Validation Accuracy |
 | --- | --- | :-: | :-: |
 | ANN 1 | 2 Hidden Layers| 63.5% | 62.8% |
 | ANN 2 | 5 hidden Layers, Dropout, Batch Normelization | 73.7% | 73.6% |
-| CNN 1 | | 97.7% | 86.8% |
-| CNN 2 | | 95.0% | 90.0% |
+| CNN 1 | 2 Filter Layers, 3 LeakyReLU, 1 Max Pooling, Flatten, Dense | 97.7% | 86.8% |
+| CNN 2 | 4 Filter Layers, 5 LeakyReLU, 2 Max Pooling, <br>2 Batch Normelization, Flatten, Dense, Dropout | 95.0% | 90.0% |
+
+From the above comparison, the CNN Model 2 performs the best on the validation data.  Furhter, with a training accuracy closer to the validation accuracy, CNN Model 2 is less overfit than CNN Model 1.
 
 <details>
   
