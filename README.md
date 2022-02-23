@@ -106,12 +106,17 @@ From the above comparison, the CNN Model 2 performs the best on the validation d
 ### Performance Against Test Data
 For both the ANN and CNN models, the second model variations had better accuracy than the first variations.  These models were selected to then predict the images in the original test dataset (not the derived validation datasets from before).  The confusion matrices and classifcation reports for these models are provided below.
 
-***Confusion Matrics***
+***Confusion Matrices:***
+
 ![](SVHN_Images/ANN_Model2_Cnfsn_Matrix.png)  ![](SVHN_Images/CNN_Model2_Cnfsn_Matrix.png)
-The confusion matrices above show the number of images for each digit that were correctly identified, and the counts for all possible errors.  Note that for both the ANN and CNN models, the number 3 proved to be the most challenging digit to properly classify
 
 ***Classification Reports (note that the model accuracies are extended across all columns)***
+
 ![](SVHN_Images/ANN2_Classification_Report.png)  ![](SVHN_Images/CNN2_Classification_Report.png)
+
+**********The confusion matrices above show the number of images for each digit that were correctly identified, and the counts for all possible classification errors.  
+
+***********Note that for both the ANN and CNN models, the number 3 appears to be the most challenging digit to properly classify.  While the classification report shows under "support" that the image count for the numbers 3 and 5 were in fact the lowest of all the digits, it also provides the recall value for each digit.  Here, this value can be interpreted as the "specific accuracy" for each number, or the percentage of correctly identified images of a given number.
 
 The model accuracies against the test data are taken from the classification reports above and can be appended to the prior model performance table for comparison.
 | Model | Layer Properties | Training Accuracy | Validation Accuracy | Test Accuracy |
@@ -125,6 +130,9 @@ It can be seen in the table above that both models performed similarly to their 
 
 
 ## Conclusions
-
+- The CNN models tended to perform better than the ANN models
+- 
+- The most accurate model was a CNN model employing (>>>>>>list the layers<<<<<<) and achieving an accuracy of ___%
+- 
 
 
