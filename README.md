@@ -81,12 +81,12 @@ CNN model 1 employed convolutional filters with 3x3 kernels and LeakyReLU activa
 ## Model Evluations and Performance Comparisons
 The improvements in accuracy of each model aginst validation and training datasets after each training epoch are shown in the plots in the dropdown below.  It can be seen that after approximately 10 epochs, the models tend to stabalize, and their final accuracy values are summarized in the table below.
 
-| Model | Training Accuracy | Validation Accuracy |
-| --- | :-: | :-: |
-| ANN 1 | 63.5% | 62.8% |
-| ANN 2 | 73.7% | 73.6% |
-| CNN 1 | 97.7% | 86.8% |
-| CNN 2 | 95.0% | 90.0% |
+| Model | Model Properties | Training Accuracy | Validation Accuracy |
+| --- | --- | :-: | :-: |
+| ANN 1 | 2 Hidden Layers| 63.5% | 62.8% |
+| ANN 2 | 5 hidden Layers, Dropout, Batch Normelization | 73.7% | 73.6% |
+| CNN 1 | | 97.7% | 86.8% |
+| CNN 2 | | 95.0% | 90.0% |
 
 <details>
   
