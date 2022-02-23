@@ -84,9 +84,9 @@ The improvements in accuracy of each model aginst validation and training datase
 | Model | Layer Properties | Training Accuracy | Validation Accuracy |
 | --- | --- | :-: | :-: |
 | ANN 1 | 2 Hidden Layers| 63.5% | 62.8% |
-| ANN 2 | 5 hidden Layers, Dropout, Batch Normelization | 73.7% | 73.6% |
-| CNN 1 | 2 Filter Layers, 3 LeakyReLU, 1 Max Pooling, Flatten, Dense | 97.7% | 87.0% |
-| CNN 2 | 4 Filter Layers, 5 LeakyReLU, 2 Max Pooling, <br>2 Batch Normelization, Flatten, Dense, Dropout | 95.0% | 90.7% |
+| ANN 2 | 5 hidden Layers, 1 Dropout, 1 Batch Normelization | 73.7% | 73.6% |
+| CNN 1 | 2 Filter Layers, 3 LeakyReLU, 1 Max Pooling, 1 Flatten, 1 Dense | 97.7% | 87.0% |
+| CNN 2 | 4 Filter Layers, 5 LeakyReLU, 2 Max Pooling, <br>2 Batch Normelization, 1 Flatten, 1 Dense, 1 Dropout | 95.0% | 90.7% |
 
 From the above comparison, the CNN Model 2 performs the best on the validation data.  Furhter, with a training accuracy closer to the validation accuracy, CNN Model 2 is less overfit than CNN Model 1.
 
@@ -104,9 +104,25 @@ From the above comparison, the CNN Model 2 performs the best on the validation d
 </details>
 
 ### Performance Against Test Data
+For both the ANN and CNN models, the second model variations had better accuracy than the first variations.  These models were selected to then predict the images in the original test dataset (not the derived validation datasets from before).  The confusion matrices and classifcation reports for these models are provided below.
 
+***Confusion Matrics***
 ![](SVHN_Images/ANN_Model2_Cnfsn_Matrix.png)  ![](SVHN_Images/CNN_Model2_Cnfsn_Matrix.png)
+The confusion matrices above show the number of images for each digit that were correctly identified, and the counts for all possible errors.  Note that for both the ANN and CNN models, the number 3 proved to be the most challenging digit to properly classify
+
+***Classification Reports (note that the model accuracies are extended across all columns)***
 ![](SVHN_Images/ANN2_Classification_Report.png)  ![](SVHN_Images/CNN2_Classification_Report.png)
+
+The model accuracies against the test data are taken from the classification reports above and can be appended to the prior model performance table for comparison.
+| Model | Layer Properties | Training Accuracy | Validation Accuracy | Test Accuracy |
+| --- | --- | :-: | :-: | :-: |
+| ANN 2 | 5 hidden Layers, 1 Dropout, 1 Batch Normelization | 73.7% | 73.6% | ***74.1%*** |
+| CNN 2 | 4 Filter Layers, 5 LeakyReLU, 2 Max Pooling, <br>2 Batch Normelization, 1 Flatten, 1 Dense, 1 Dropout | 95.0% | 90.7% | ***90.9%*** |
+
+It can be seen in the table above that both models performed similarly to their predicted accuracies, and that CNN model 2 is the better model when evaluating accuracy.
+
+
+
 
 ## Conclusions
 
