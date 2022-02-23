@@ -85,8 +85,8 @@ The improvements in accuracy of each model aginst validation and training datase
 | --- | --- | :-: | :-: |
 | ANN 1 | 2 Hidden Layers| 63.5% | 62.8% |
 | ANN 2 | 5 hidden Layers, Dropout, Batch Normelization | 73.7% | 73.6% |
-| CNN 1 | 2 Filter Layers, 3 LeakyReLU, 1 Max Pooling, Flatten, Dense | 97.7% | 86.8% |
-| CNN 2 | 4 Filter Layers, 5 LeakyReLU, 2 Max Pooling, <br>2 Batch Normelization, Flatten, Dense, Dropout | 95.0% | 90.0% |
+| CNN 1 | 2 Filter Layers, 3 LeakyReLU, 1 Max Pooling, Flatten, Dense | 97.7% | 87.0% |
+| CNN 2 | 4 Filter Layers, 5 LeakyReLU, 2 Max Pooling, <br>2 Batch Normelization, Flatten, Dense, Dropout | 95.0% | 90.7% |
 
 From the above comparison, the CNN Model 2 performs the best on the validation data.  Furhter, with a training accuracy closer to the validation accuracy, CNN Model 2 is less overfit than CNN Model 1.
 
@@ -102,6 +102,10 @@ From the above comparison, the CNN Model 2 performs the best on the validation d
   ![](SVHN_Images/CNN_Model1.png)  ![](SVHN_Images/CNN_Model2.png)
   
 </details>
+
+#### Performance Against Test Data
+
+
 
 ## Conclusions
 
