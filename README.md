@@ -88,9 +88,19 @@ The improvements in accuracy of each model aginst validation and training datase
 | CNN 1 | 97.7% | 86.8% |
 | CNN 2 | 95.0% | 90.0% |
 
+<details>
+  
+  <summary>
+    <b><i>Model Accuracies Plotted Against Training Epochs (Click for Dropdown)</i></b>
+    </summary>
+  
+  <br>
 
-
+  ![](SVHN_Images/ANN_Model1.png)  ![](SVHN_Images/ANN_Model2.png)
+  
+</details>
 
 ## Conclusions
+
 
 
