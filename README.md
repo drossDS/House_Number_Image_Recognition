@@ -15,7 +15,7 @@ The provided dataset was pre-split into training and test datasets of 42,000 and
 
 ## Models Run
 
-All Artificial and Convolutional Neural Network models were run with Keras as sequential models.  For both ANN and CNN models, two variations were run to showcase the benefits of adding features to improve model accuracy.  By nature, the ANN models were far simpler than the CNN models, and this is reflected specifically in the both quantities and types of layers that make up each model.  Below are brief descriptions of each along with tables of the detailed properties of each model.  The bolded values in tables below highlight the differences between the properties of the two model variations for the ANN and CNN models.
+All Artificial and Convolutional Neural Network models were run with Keras as sequential models.  For both ANN and CNN models, two variations were run to showcase the benefits of adding features to improve model accuracy.  By nature, the ANN models were far simpler than the CNN models, and this is reflected specifically in the both quantities and types of layers that make up each model.  Below are brief descriptions of each along with tables of the detailed properties of each model.  The bolded values in tables below highlight the differences between the properties of the two model variations for the ANN and CNN models.  Each model was fit against the provided training dataset which was further split into a validation (test) dataset comprised of 20% of the original training data and a yet smaller training dataset for fitting the model.  This allowed for a comparison of the model's accuracy aginst the both the validation data and the smaller training dataset with each training epoch.
 
 ### Artificial Neural Network (ANN) Model Properties
 ANN Model 1 implmented two hidden layers employing ReLU activation funcitons.  Model 2 added more hidden layers, dropout layers, and batch normalization layers, and increased the number of nodes speified in each hidden layer.  The models are compared side-by-side in the table below for easy comparison (click the dropdown arrow to reveal).
@@ -77,6 +77,18 @@ CNN model 1 employed convolutional filters with 3x3 kernels and LeakyReLU activa
 |-| Compile | Loss: Categorical Crossentropy<br>Optimizer: Adam, Learning Rate: 0.001<br>Metrics: Accuracy ||- | Compile | Loss: Categorical Crossentropy<br>Optimizer: Adam, Learning Rate: 0.001<br>Metrics: Accuracy |
 |-| Fitting | Validation Split: 0.2<br>Batch Size: 32<br>Epochs: 20 ||- | Fitting | Validation Split: 0.2<br>***Batch Size: 128***<br>***Epochs: 30*** |
 </details>
+
+## Model Evluations and Performance Comparisons
+The improvements in accuracy of each model aginst validation and training datasets after each training epoch are shown in the plots in the dropdown below.  It can be seen that after approximately 10 epochs, the models tend to stabalize, and their final accuracy values are summarized in the table below.
+
+| Model | Training Accuracy | Validation Accuracy |
+| --- | :-: | :-: |
+| ANN 1 | 63.5% | 62.8% |
+| ANN 2 | 73.7% | 73.6% |
+| CNN 1 | 97.7% | 86.8% |
+| CNN 2 | 95.0% | 90.0% |
+
+
 
 
 ## Conclusions
