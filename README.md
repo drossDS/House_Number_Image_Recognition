@@ -130,3 +130,6 @@ The general conclusions are summaraized as follows:
 - While more complex and computationally intensive, the convolutional neural network models performed far better than the artificial neural network models when comparing both the overall model accuracy, and the recall values for individual numbers
 - The most accurate model was the CNN2 model, achieving an accuracy of 90.9%
 - For both the ANN and CNN models, adding dropout and batch normalization layers, and increasing the quantities of hidden or convolutional filter layers (with higher numbers of nodes or filters respectively) increased the model accuracy
+
+## Note Regarding MIT ADSP Weekly Projects:
+**The code for this project was provided by the program, and the students were required to fill in the key lines of code and answer the provided prompts**
