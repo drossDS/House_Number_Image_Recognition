@@ -114,25 +114,19 @@ For both the ANN and CNN models, the second model variations had better accuracy
 
 ![](SVHN_Images/ANN2_Classification_Report.png)  ![](SVHN_Images/CNN2_Classification_Report.png)
 
-**********The confusion matrices above show the number of images for each digit that were correctly identified, and the counts for all possible classification errors.  
+The confusion matrices above show the number of images for each digit that were correctly identified (the values on the diagonal) along with the counts of all possible classification errors.  The classification reports provide additional information for each digit. Namely, the recall values corresponding to each number can be interpreted as the accuracy with which each number was classified by each model.  For the ANN model, these recall values range from 66.9% to 82.8%, while the CNN model recall values acheive a tighter range of 86.0% to 94.3%.  When examining specific numbers, it can be seen that the number 1 is more easily classified by each model, and the number 3 is not as easily classified, hvaing some of the lowest recall values for each model.  While one can speculate why this is the case with qualitative comparisons of how similar the shapes of these numbers are to others, a more in-depth understanding of how the neural networks are processing these images would be required to discuss these observations more intelligently.
 
-***********Note that for both the ANN and CNN models, the number 3 appears to be the most challenging digit to properly classify.  While the classification report shows under "support" that the image count for the numbers 3 and 5 were in fact the lowest of all the digits, it also provides the recall value for each digit.  Here, this value can be interpreted as the "specific accuracy" for each number, or the percentage of correctly identified images of a given number.
+In a model final model comparison, the model accuracies against the test data are taken from the classification reports above and are appended to the prior model performance table.
 
-The model accuracies against the test data are taken from the classification reports above and can be appended to the prior model performance table for comparison.
 | Model | Layer Properties | Training Accuracy | Validation Accuracy | Test Accuracy |
 | --- | --- | :-: | :-: | :-: |
 | ANN 2 | 5 hidden Layers, 1 Dropout, 1 Batch Normelization | 73.7% | 73.6% | ***74.1%*** |
 | CNN 2 | 4 Filter Layers, 5 LeakyReLU, 2 Max Pooling, <br>2 Batch Normelization, 1 Flatten, 1 Dense, 1 Dropout | 95.0% | 90.7% | ***90.9%*** |
 
-It can be seen in the table above that both models performed similarly to their predicted accuracies, and that CNN model 2 is the better model when evaluating accuracy.
-
-
-
+It can be seen that both models performed similarly to their predicted accuracies, and that CNN model 2 is the better model when evaluating accuracy.
 
 ## Conclusions
-- The CNN models tended to perform better than the ANN models
-- 
-- The most accurate model was a CNN model employing (>>>>>>list the layers<<<<<<) and achieving an accuracy of ___%
-- 
-
-
+The general conclusions are summaraized as follows:
+- While more complex and computationally intensive, the convolutional neural network models performed far better than the artificial neural network models when comparing both the overall model accuracy, and the recall values for individual numbers
+- The most accurate model was the CNN2 model, achieving an accuracy of 90.9%
+- For both the ANN and CNN models, adding dropout and batch normalization layers, and increasing the quantities of hidden or convolutional filter layers (with higher numbers of nodes or filters respectively) increased the model accuracy
