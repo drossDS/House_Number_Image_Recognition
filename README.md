@@ -110,14 +110,16 @@ For both the ANN and CNN models, the second model variations had better accuracy
 
 ![](SVHN_Images/ANN_Model2_Cnfsn_Matrix.png)  ![](SVHN_Images/CNN_Model2_Cnfsn_Matrix.png)
 
-Save for obtaining a general sense of which digits are being confused with each other, the fact that there are a different number of images corresponding to each digit
+Save for obtaining a general sense of which digits are being confused with each other, the fact that there are a different number of images corresponding to each digit can make it difficult to properly compare the counts of each error type.  Further, without an understanding of exactly which features of an image each model may use to classify an image as particular digit, it's diifuclt to to use the confusion matrix data to speculat why certain numbers may be confused with others.
+
+A classification report provides more general data including the precision, recall, and F1-score values for digit (category).  The recall values can here be interpreted as the percentages of images of a corresponding digit properly identified as their correct digit.  The precision values represent the percentages of image ***predicted to be a certain digit***  which are correctly predicted.  Put simply, it's important for the model to correctly identify as many of the images as their correct digit as possible, but it's also important for the model to not "over-identify" by creating false positives to guarantee that most actual images for a certain digit are identified.  This is where the F1-score is useful in that it's a hyrbidized metric considering both of these aspects simultaneously.  Below, the precision, recall, and F1-scores for the second ANN and CNN models are plotted for each digit category.
 
 ***Precision, Recall, and F1-Score Values for Each Model***
 
 ![](SVHN_Images/ANN2_PRF1.png)
 ![](SVHN_Images/CNN2_PRF1.png)
 
-The confusion matrices above show the number of images for each digit that were correctly identified (the values on the diagonal) along with the counts of all possible classification errors.  The classification reports provide additional information for each digit. Namely, the recall values corresponding to each number can be interpreted as the accuracy with which each number was classified by each model.  For the ANN model, these recall values range from 66.9% to 82.8%, while the CNN model recall values acheive a tighter range of 86.0% to 94.3%.  When examining specific numbers, it can be seen that the number 1 is more easily classified by each model, and the number 3 is not as easily classified, hvaing some of the lowest recall values for each model.  While one can speculate why this is the case with qualitative comparisons of how similar the shapes of these numbers are to others, a more in-depth understanding of how the neural networks are processing these images would be required to discuss these observations more intelligently.
+
 
 In a model final model comparison, the model accuracies against the test data are taken from the classification reports above and are appended to the prior model performance table.
 
