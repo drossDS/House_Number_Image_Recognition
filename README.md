@@ -108,11 +108,12 @@ For both the ANN and CNN models, the second model variations had better accuracy
 
 ***Confusion Matrices:***
 
-![](SVHN_Images/ANN_Model2_Cnfsn_Matrix.png)  ![](SVHN_Images/CNN_Model2_Cnfsn_Matrix.png)
+![](SVHN_Images/ANN2_PRF1.png)  ![](SVHN_Images/CNN2_PRF1.png)
 
 ***Classification Reports (note that the model accuracies are extended across all columns)***
 
-![](SVHN_Images/ANN2_Classification_Report.png)  ![](SVHN_Images/CNN2_Classification_Report.png)
+![](SVHN_Images/ANN2_Classification_Report.png)
+![](SVHN_Images/CNN2_Classification_Report.png)
 
 The confusion matrices above show the number of images for each digit that were correctly identified (the values on the diagonal) along with the counts of all possible classification errors.  The classification reports provide additional information for each digit. Namely, the recall values corresponding to each number can be interpreted as the accuracy with which each number was classified by each model.  For the ANN model, these recall values range from 66.9% to 82.8%, while the CNN model recall values acheive a tighter range of 86.0% to 94.3%.  When examining specific numbers, it can be seen that the number 1 is more easily classified by each model, and the number 3 is not as easily classified, hvaing some of the lowest recall values for each model.  While one can speculate why this is the case with qualitative comparisons of how similar the shapes of these numbers are to others, a more in-depth understanding of how the neural networks are processing these images would be required to discuss these observations more intelligently.
 
