@@ -84,9 +84,9 @@ The improvements in accuracy of each model aginst validation and training datase
 | Model | Layer Properties | Training Accuracy | Validation Accuracy |
 | --- | --- | :-: | :-: |
 | ANN 1 | 2 Hidden Layers| 63.5% | 62.8% |
-| ANN 2 | 5 hidden Layers, 1 Dropout, 1 Batch Normelization | 73.7% | 73.6% |
-| CNN 1 | 2 Filter Layers, 3 LeakyReLU, 1 Max Pooling, 1 Flatten, 1 Dense | 97.7% | 87.0% |
-| CNN 2 | 4 Filter Layers, 5 LeakyReLU, 2 Max Pooling, <br>2 Batch Normelization, 1 Flatten, 1 Dense, 1 Dropout | 95.0% | 90.7% |
+| ANN 2 | 5 hidden Layers, 1 Dropout, 1 Batch Normelization | 74.1% | 74.1% |
+| CNN 1 | 2 Filter Layers, 3 LeakyReLU, 1 Max Pooling, 1 Flatten, 1 Dense | 97.4% | 86.8% |
+| CNN 2 | 4 Filter Layers, 5 LeakyReLU, 2 Max Pooling, <br>2 Batch Normelization, 1 Flatten, 1 Dense, 1 Dropout | 94.6% | 91.1% |
 
 From the above comparison, the CNN Model 2 performs the best on the validation data.  Furhter, with a training accuracy closer to the validation accuracy, CNN Model 2 is less overfit than CNN Model 1.
 
@@ -125,15 +125,15 @@ In a model final model comparison, the model accuracies against the test data ar
 
 | Model | Layer Properties | Training Accuracy | Validation Accuracy | Test Accuracy |
 | --- | --- | :-: | :-: | :-: |
-| ANN 2 | 5 hidden Layers, 1 Dropout, 1 Batch Normelization | 73.7% | 73.6% | ***74.1%*** |
-| CNN 2 | 4 Filter Layers, 5 LeakyReLU, 2 Max Pooling, <br>2 Batch Normelization, 1 Flatten, 1 Dense, 1 Dropout | 95.0% | 90.7% | ***90.9%*** |
+| ANN 2 | 5 hidden Layers, 1 Dropout, 1 Batch Normelization | 74.1% | 74.1% | ***74.1%*** |
+| CNN 2 | 4 Filter Layers, 5 LeakyReLU, 2 Max Pooling, <br>2 Batch Normelization, 1 Flatten, 1 Dense, 1 Dropout | 94.6% | 91.1% | ***91.1%*** |
 
 It can be seen that both models performed similarly to their predicted accuracies, and that CNN model 2 is the better model when evaluating accuracy.
 
 ## Conclusions
 The general conclusions are summaraized as follows:
-- While more complex and computationally intensive, the convolutional neural network models performed far better than the artificial neural network models when comparing both the overall model accuracy, and the recall values for individual numbers
-- The most accurate model was the CNN2 model, achieving an accuracy of 90.9%
+- While more complex and computationally intensive, the convolutional neural network models performed far better than the artificial neural network models when comparing the overall model accuracy, precision, recall and F1-scores
+- The most accurate model was the CNN2 model, achieving an accuracy of 91.1%
 - For both the ANN and CNN models, adding dropout and batch normalization layers, and increasing the quantities of hidden or convolutional filter layers (with higher numbers of nodes or filters respectively) increased the model accuracy
 
 ## Note Regarding MIT ADSP Weekly Projects:
